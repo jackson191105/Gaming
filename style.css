@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #020617;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background: linear-gradient(to right, #020617cc, #020617cc),
+              url('https://via.placeholder.com/1200x600');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero button {
+  width: 200px;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* GAMES */
+.games {
+  padding: 60px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.game-card {
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+}
+
+.game-card h3 {
+  text-align: center;
+  padding: 15px;
+}
+
+/* TOURNAMENT */
+.tournaments {
+  background: #020617;
+  padding: 50px;
+  text-align: center;
+}
+
+/* COMMUNITY */
+.community {
+  padding: 60px;
+  text-align: center;
+}
+
+.community button {
+  padding: 12p
