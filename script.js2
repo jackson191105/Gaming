@@ -1,0 +1,57 @@
+let isRegister = false;
+
+function showRegister() {
+  isRegister = true;
+  document.getElementById("formTitle").innerText = "Register on GameHub";
+  document.querySelector("button").innerText = "Register";
+  document.querySelector(".toggle").innerHTML =
+    `Already have an account? <span onclick="showLogin()">Login</span>`;
+  document.getElementById("message").innerText = "";
+}
+
+function showLogin() {
+  isRegister = false;
+  document.getElementById("formTitle").innerText = "Login to GameHub";
+  document.querySelector("button").innerText = "Login";
+  document.querySelector(".toggle").innerHTML =
+    `Don't have an account? <span onclick="showRegister()">Register</span>`;
+  document.getElementById("message").innerText = "";
+}
+
+function login() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const message = document.getElementById("message");
+
+  if (!username || !password) {
+    message.style.color = "red";
+    message.innerText = "Please fill all fields";
+    return;
+  }
+
+  if (isRegister) {
+    localStorage.setItem("gameUser", JSON.stringify({ username, password }));
+    message.style.color = "lightgreen";
+    message.innerText = "Registration successful! You can login now.";
+    showLogin();
+  } else {
+    const savedUser = JSON.parse(localStorage.getItem("gameUser"));
+
+    if (!savedUser) {
+      message.style.color = "red";
+      message.innerText = "No account found. Please register.";
+      return;
+    }
+
+    if (
+      username === savedUser.username &&
+      password === savedUser.password
+    ) {
+      message.style.color = "lightgreen";
+      message.innerText = "Login successful!";
+    } else {
+      message.style.color = "red";
+      message.innerText = "Invalid username or password";
+    }
+  }
+}
