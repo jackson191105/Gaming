@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GameHub Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>🎮 GameHub</h2>
+    <a class="active">Dashboard</a>
+    <a>Games</a>
+    <a>Tournaments</a>
+    <a>Players</a>
+    <a>Settings</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="topbar">
+      <h1>Gaming Dashboard</h1>
+      <div class="profile">Admin</div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats">
+      <div class="card">
+        <h3>Total Players</h3>
+        <p>12,845</p>
+      </div>
+      <div class="card">
+        <h3>Active Games</h3>
+        <p>36</p>
+      </div>
+      <div class="card">
+        <h3>Ongoing Tournaments</h3>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>$42,300</p>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="games">
+      <h2>Popular Games</h2>
+      <div class="game-grid">
+        <div class="game-card">Battle Arena</div>
+        <div class="game-card">Racing Pro</div>
+        <div class="game-card">War Legends</div>
+      </div>
+    </section>
+
+    <!-- Activity -->
+    <section class="activity">
+      <h2>Recent Activity</h2>
+      <ul>
+        <li>🔥 PlayerX joined Battle Arena</li>
+        <li>🏆 Pro League Tournament Started</li>
+        <li>🎮 New Game Added: Racing Pro</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
